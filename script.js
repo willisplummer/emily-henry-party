@@ -126,6 +126,31 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 50);
     });
     
+    // Touch trail effect for mobile
+    let touchThrottleTimer;
+    let lastTouchTime = 0;
+    
+    document.addEventListener('touchmove', (e) => {
+        if (touchThrottleTimer) return;
+        
+        const touch = e.touches[0];
+        const currentTime = Date.now();
+        
+        // Slightly faster trail for touch to make it more visible
+        touchThrottleTimer = setTimeout(() => {
+            createHeart(touch.clientX, touch.clientY);
+            touchThrottleTimer = null;
+        }, 30);
+        
+        lastTouchTime = currentTime;
+    });
+    
+    // Create hearts on touch start too
+    document.addEventListener('touchstart', (e) => {
+        const touch = e.touches[0];
+        createHeart(touch.clientX, touch.clientY);
+    });
+    
     // Konami code listener
     document.addEventListener('keydown', (e) => {
         checkKonamiCode(e.key);
