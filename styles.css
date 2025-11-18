@@ -1,0 +1,83 @@
+html {
+  font-family: 'CS Gordon', sans-serif;
+}
+
+body {
+  background-color: black;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  font-family: 'M PLUS 1 Code', sans-serif;
+  width: 95%;
+}
+
+.main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+h1 {
+  color: gold;
+  width: 100%;
+  text-align: center;
+  font-size: 58px;
+  font-family: 'Feeling Babylon', sans-serif;
+  margin-bottom: 12px;
+}
+
+h2 {
+  color: gold;
+  font-family: 'CS Gordon', sans-serif;
+}
+
+h2 span.white {
+    color: white;
+}
+
+a {
+  color: gold;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+footer {
+  margin: 40px 0;
+}
+
+img {
+  width: 100%;
+}
+
+/* bigger than phone */
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  nav {
+    font-size: 22px;
+  }
+
+  .two-col {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+
+    .left {
+      flex: 2;
+    }
+
+    .right {
+      flex: 1;
+    }
+  }
+}
