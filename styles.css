@@ -3,12 +3,12 @@ html {
 }
 
 body {
-  background-color: black;
-  color: white;
+  background-color: #faf9f6;
+  color: #3a3a3a;
   margin-left: auto;
   margin-right: auto;
   font-size: 16px;
-  font-family: 'M PLUS 1 Code', sans-serif;
+  font-family: 'Georgia', serif;
   width: 95%;
 }
 
@@ -18,25 +18,35 @@ body {
 }
 
 h1 {
-  color: gold;
+  color: #d4a574;
   width: 100%;
   text-align: center;
-  font-size: 58px;
+  font-size: 72px;
   font-family: 'Feeling Babylon', sans-serif;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
 }
 
 h2 {
-  color: gold;
+  color: #8b7355;
   font-family: 'CS Gordon', sans-serif;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 h2 span.white {
-    color: white;
+    color: #3a3a3a;
 }
 
 a {
-  color: gold;
+  color: #8b7355;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  border-bottom: 1px solid #8b7355;
 }
 
 nav {
@@ -44,17 +54,63 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 6px;
-  font-size: 18px;
-  margin-bottom: 12px;
+  gap: 20px;
+  font-size: 16px;
+  margin-bottom: 30px;
+  font-family: 'CS Gordon', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 footer {
-  margin: 40px 0;
+  margin: 60px 0 40px 0;
+  padding-top: 40px;
+  border-top: 1px solid #e0dcd5;
 }
 
 img {
   width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+h3 {
+  color: #8b7355;
+  font-family: 'CS Gordon', sans-serif;
+  font-size: 24px;
+  margin: 20px 0 10px 0;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.shows {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.shows h3 {
+  color: #d4a574;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.shows ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.shows ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0ebe4;
+}
+
+.shows ul li:last-child {
+  border-bottom: none;
 }
 
 /* bigger than phone */
@@ -64,7 +120,7 @@ img {
   }
 
   nav {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .two-col {
