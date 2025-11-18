@@ -30,8 +30,13 @@
                         - Willis, 2025
 */
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: 'Comic Sans MS', 'Arial', sans-serif;
+  overflow-x: hidden;
 }
 
 body {
@@ -44,11 +49,13 @@ body {
   padding: 0;
   text-align: center;
   cursor: crosshair;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .wrapper {
-  width: 800px;
-  max-width: 95%;
+  width: 100%;
+  max-width: 800px;
   margin: 20px auto;
   padding: 20px;
   border: 5px ridge #FFD700;
@@ -273,8 +280,8 @@ strong {
   color: #00FF00;
   padding: 15px;
   margin: 20px auto;
-  width: 300px;
-  max-width: 90%;
+  width: 100%;
+  max-width: 300px;
   border: 5px ridge #C0C0C0;
   font-family: 'Courier New', monospace;
 }
@@ -374,8 +381,8 @@ strong {
   background-color: #C0C0C0;
   border: 3px ridge #808080;
   padding: 10px;
-  width: 200px;
-  max-width: 90%;
+  width: 100%;
+  max-width: 200px;
 }
 
 .best-viewed p {
