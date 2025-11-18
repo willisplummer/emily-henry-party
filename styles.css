@@ -43,6 +43,7 @@ body {
   font-family: 'Times New Roman', serif;
   padding: 0;
   text-align: center;
+  cursor: crosshair;
 }
 
 .wrapper {
@@ -263,4 +264,123 @@ strong {
   .right {
     flex: 1;
   }
+}
+
+/* Classic View Counter */
+.view-counter-container {
+  text-align: center;
+  background-color: #000000;
+  color: #00FF00;
+  padding: 15px;
+  margin: 20px auto;
+  width: 300px;
+  max-width: 90%;
+  border: 5px ridge #C0C0C0;
+  font-family: 'Courier New', monospace;
+}
+
+.counter-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+#view-counter {
+  font-family: 'LED', 'Courier New', monospace;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: #00FF00;
+  text-shadow: 0 0 5px #00FF00;
+  display: inline-block;
+  background-color: #111111;
+  padding: 5px 10px;
+  border: 2px inset #555555;
+}
+
+/* Mouse Trail Effect */
+.mouse-trail {
+  position: fixed;
+  pointer-events: none;
+  font-size: 20px;
+  z-index: 9998;
+  animation: fadeOut 1s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  0% { 
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% { 
+    opacity: 0;
+    transform: translateY(-20px) scale(1.5);
+  }
+}
+
+/* Konami Easter Egg */
+.konami-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFD700;
+  color: #FF00FF;
+  padding: 30px;
+  border: 10px ridge #00FF00;
+  text-align: center;
+  z-index: 10000;
+  font-family: 'Comic Sans MS', cursive;
+  animation: partyPulse 0.5s infinite alternate;
+}
+
+@keyframes partyPulse {
+  0% { transform: translate(-50%, -50%) scale(1) rotate(-5deg); }
+  100% { transform: translate(-50%, -50%) scale(1.1) rotate(5deg); }
+}
+
+.party-mode {
+  animation: partyBackground 0.5s infinite;
+}
+
+@keyframes partyBackground {
+  0% { background-color: #FF0000; }
+  20% { background-color: #00FF00; }
+  40% { background-color: #0000FF; }
+  60% { background-color: #FFFF00; }
+  80% { background-color: #FF00FF; }
+  100% { background-color: #00FFFF; }
+}
+
+.confetti {
+  position: fixed;
+  top: -10px;
+  width: 10px;
+  height: 10px;
+  z-index: 9999;
+  animation: confettiFall 3s linear forwards;
+}
+
+@keyframes confettiFall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+/* Best Viewed Badge */
+.best-viewed {
+  text-align: center;
+  margin: 20px auto;
+  background-color: #C0C0C0;
+  border: 3px ridge #808080;
+  padding: 10px;
+  width: 200px;
+  max-width: 90%;
+}
+
+.best-viewed p {
+  font-size: 10px;
+  margin: 5px 0;
+  color: #000000;
+  font-family: 'Arial', sans-serif;
 }
